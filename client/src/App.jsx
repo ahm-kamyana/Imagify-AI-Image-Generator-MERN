@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import AppContext from "./context/AppContext";
 import { AppContextProvider } from "./context/AppContext.jsx";
 import { ToastContainer } from "react-toastify";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const AppContent = () => {
         <Route path="/buy" element={<BuyCredits />} />
       </Routes>
       <Footer />
+      <SpeedInsights />
     </div>
   );
 };
