@@ -16,18 +16,14 @@ const Footer = () => {
         Copyright @Ahmed | All right reserved.
       </p>
       <div className="flex gap-4 items-center justify-center ">
-        <img
-          src={assets.instagram_icon}
-          alt="Instagram"
-          width={20}
-          className="cursor-pointer hover:scale-110 sm:w-8 w-5 transition duration-300"
-        />
-        <img
-          src={assets.linkedin_icon}
-          alt="Instagram"
-          width={20}
-          className="cursor-pointer hover:scale-110 sm:w-8 w-5 transition duration-300"
-        />
+        <a href="https://www.linkedin.com/in/ahm-kamyana">
+          <img
+            src={assets.linkedin_icon}
+            alt="Linkdin"
+            width={20}
+            className="cursor-pointer hover:scale-110 sm:w-8 w-5 transition duration-300"
+          />
+        </a>
       </div>
     </div>
   );
