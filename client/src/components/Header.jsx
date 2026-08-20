@@ -73,7 +73,7 @@ const Header = () => {
         animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        {Array(6)
+        {Array(4)
           .fill("")
           .map((item, index) => (
             <img

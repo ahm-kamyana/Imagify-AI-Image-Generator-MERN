@@ -36,9 +36,9 @@ const Navbar = () => {
               <img
                 src={assets.credit_star}
                 alt="Credit Star"
-                className="w-5 sm:w-6 md:w-7 lg:w-8"
+                className="w-5 sm:w-6 md:w-7 lg:w-8 hidde"
               />
-              Credits left: {credits}
+              Credits: {credits}
             </button>
             <div className="flex items-center gap-2">
               <p className="sm:text-lg text-gray-700 max-sm:hidden">
@@ -63,7 +63,7 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <div className="flex gap-4 sm:gap-6 lg:gap-8 items-center">
+          <div className="flex gap-2 sm:gap-6 lg:gap-8 items-center">
             <Link to="/buy">
               <button className="cursor-pointer text-base sm:text-lg ">
                 Pricing
