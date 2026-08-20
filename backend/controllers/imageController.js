@@ -49,7 +49,6 @@ const imageGenerator = async (req, res) => {
         responseType: "arraybuffer",
       }
     );
-    console.log(process.env.API_KEY, "key");
     await userModel.findByIdAndUpdate(userId, {
       creditBalance: user.creditBalance - 1,
     });
