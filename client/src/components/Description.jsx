@@ -15,7 +15,7 @@ const Description = () => {
       <h1 className="text-2xl sm:text-3xl md:text-4xl mb-2 font-semibold ">
         Create AI Images
       </h1>
-      <p className="text-gray-500 mb-8">Turn your imaginations into visuals</p>
+      <p className="text-gray-500 mb-8 text-center">Turn your imaginations into visuals</p>
 
       <div className="flex flex-col gap-5 lg:gap-14 lg:flex-row items-center justify-center">
         <img

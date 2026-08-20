@@ -22,7 +22,7 @@ const Header = () => {
       transition={{ duration: 0.5,delay: 0.2 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="w-full h-full mt-30 md:mt-10 flex flex-col items-center justify-center"
+      className="w-full h-full mt-20 md:mt-10 flex flex-col items-center justify-center"
     >
       <motion.p
         className="flex items-center gap-2 border border-neutral-900 rounded-full py-2 px-4 text-xs bg-white text-zinc-800 mb-4"
@@ -57,7 +57,7 @@ const Header = () => {
 
       <motion.button
         onClick={() => handleClick()}
-        className="sm:text-lg text-white bg-black w-auto mt-6 px-12 py-2.5 flex items-center gap-2 rounded-full cursor-pointer hover:scale-105 transition duration-300  active:scale-97 "
+        className="sm:text-lg text-white bg-black w-auto mt-6 px-8 sm:px-12 py-2.5 flex items-center gap-2 rounded-full cursor-pointer hover:scale-105 transition duration-300  active:scale-97 "
         initial={{ opacity: 0 }}
         transition={{ duration: 2, delay: 0.8 }}
         animate={{ opacity: 1 }}

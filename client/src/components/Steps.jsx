@@ -14,17 +14,17 @@ const Steps = () => {
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2">
         How it works
       </h1>
-      <p className="text-zinc-600 text-base sm:text-lg mb-6">
+      <p className="text-zinc-600 text-base sm:text-lg mb-6 text-center">
         Transform Words Into Stunning Images
       </p>
       {stepsData.map((step, index) => (
         <div
           key={index}
-          className="hover:scale-102 transition duration-400 md:w-2/3 min-w-[300px] shadow-2xl mb-6 flex gap-4 px-4 py-2 md:px-10 md:py-6 rounded-xl border border-neutral-300 cursor-pointer"
+          className="hover:scale-102 transition duration-400 md:w-2/3 sm:min-w-[300px] min-w-[250px] shadow-2xl mb-6 flex gap-4 px-2 py-2 md:px-10 md:py-6 rounded-xl border border-neutral-300 cursor-pointer"
         >
           <img src={step.icon} alt="icon" className="w-12" />
           <div>
-            <h2 className="md:text-2xl md:font-semibold text-lg">
+            <h2 className="md:text-2xl md:font-semibold sm:text-lg text-base">
               {step.title}
             </h2>
             <p className="text-neutral-700 leading-tight text-xs sm:text-base">

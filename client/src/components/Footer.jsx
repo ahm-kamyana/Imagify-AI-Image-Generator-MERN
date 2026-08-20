@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center justify-between gap-4 my-3 mt-10">
+    <div className="flex items-center justify-between gap-4 my-5 mt-10">
       <img
         onClick={() => navigate("/")}
         src={assets.logo}
@@ -13,7 +13,7 @@ const Footer = () => {
         className="w-30 sm:w-40 cursor-pointer"
       />
       <p className="text-gray-500 text-sm flex-1 border-l border-gray-500 pl-4 hidden sm:block">
-        Copyright @Ahmed | All right reserved.
+        Copyright @Ahmad | All right reserved.
       </p>
       <div className="flex gap-4 items-center justify-center ">
         <a href="https://www.linkedin.com/in/ahm-kamyana">
