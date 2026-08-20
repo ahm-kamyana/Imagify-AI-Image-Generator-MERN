@@ -77,13 +77,6 @@ export const testimonialsData = [
     stars: 5,
     text: `I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`,
   },
-  {
-    image: profile_img_1,
-    name: "Donald Jackman",
-    role: " Graphic Designer",
-    stars: 4,
-    text: `I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`,
-  },
 ];
 
 export const plans = [
@@ -92,17 +85,5 @@ export const plans = [
     price: 0,
     credits: 10,
     desc: `Best for personal use.`,
-  },
-  {
-    id: "Business",
-    price: 0,
-    credits: 70,
-    desc: "Best for business use.",
-  },
-  {
-    id: "Enterprise",
-    price: 0,
-    credits: 500,
-    desc: "Best for enterprise use.",
   },
 ];
