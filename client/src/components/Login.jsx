@@ -19,18 +19,20 @@ const Login = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (enableSignUp) {
       try {
         // Handle sign up logic here
+        setLoading(true);
         let res = await axios.post(`${backendURL}/user/register`, {
           name,
           email,
           password,
         });
-        console.log(res);
+        setLoading(false);
         if (res.status === 200) {
           setToken(res.data.token);
           setUser(res.data.user);
@@ -41,10 +43,6 @@ const Login = () => {
           toast.error(res.response.data.message);
         }
       } catch (err) {
-        // toast.error("User already exists");
-        // console.log(err);
-        
-
         if (err.response.data.error) {
           toast.error(err.response.data.error[0].msg);
         } else {
@@ -53,13 +51,13 @@ const Login = () => {
       }
     } else {
       // Handle login logic here
+      setLoading(true);
       try {
         let res = await axios.post(`${backendURL}/user/login`, {
           email,
           password,
         });
-        console.log(res);
-
+        setLoading(false);
         if (res.status === 200) {
           setToken(res.data.token);
           setUser(res.data.user);
@@ -128,7 +126,7 @@ const Login = () => {
           </p>
         ) : (
           <p className="text-center text-gray-700 text-sm mb-6">
-            Welcome back! Please sign in to continue
+            Welcome back! Please <b>log in</b> to continue
           </p>
         )}
         {enableSignUp && (
@@ -187,18 +185,25 @@ const Login = () => {
           />
         </div>
 
-        {!enableSignUp && (
+        {/* {!enableSignUp && (
           <div>
             <p className="ml-2 mb-2  text-base text-blue-500 cursor-pointer inline-block">
               Forgot password?
             </p>
           </div>
-        )}
+        )} */}
         <button
+          disabled={loading}
           type="submit"
-          className="w-full text-xl bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 transition duration-300 cursor-pointer"
+          className={`w-full text-xl bg-blue-500 text-white py-3 rounded-full hover:bg-blue-600 transition duration-300 cursor-pointer `}
         >
-          {enableSignUp ? "Create Account" : "Login"}
+          {enableSignUp
+            ? loading
+              ? "Creating..."
+              : "Create Account"
+            : loading
+              ? "Logging in..."
+              : "Login"}
         </button>
         {!enableSignUp ? (
           <p className="text-gray-600 py-4 mb-8 ml-2 text-center">
